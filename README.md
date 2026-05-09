@@ -1,20 +1,40 @@
-**Please note that UJR is no longer maintained as it has been replaced with [UCR](https://github.com/evilC/UCR).  **
-
 # AHK - Universal Joystick Remapper (UJR)
 
-UJR is a stand-alone application written in AutoHotkey.   
-It is distributed in compiled form, so please do not attempt to download the source from Github unless you know what you are doing.
+> Legacy project: UJR is no longer maintained and has been superseded by [UCR](https://github.com/evilC/UCR).
 
-**[Download UJR](http://evilc.com/proj/ujr).**
+UJR is a stand-alone AutoHotkey application for mapping buttons and axes from one or more physical joysticks onto a virtual joystick, including support for inversion, deadzones, sensitivity, axis merging, and axis splitting.
 
-UJR is an application for taking axes or buttons from one or more physical joysticks, and merging them onto a virtual joystick (with tweaks such as axis inversion, deadzones, sensitivity etc).
+## Project status
 
-It is used by gamers to fine tune behavior of sticks and perform operations not normally possible such as merge two pedal axes into one "rudder axis."
+- This repository is kept for historical reference and source availability.
+- New development has moved to [UCR](https://github.com/evilC/UCR).
+- Expect limited or no fixes for new issues in UJR.
 
-WARNING: UJR does "Phone Home" to check version number (it reads a text file from my web site) so it can let you know if a newer version is available. This behavior is non-malicious, but any attempt by any version of UJR to do anything else network-wise should be considered malicious and a result of a modified or infected file.
+## Getting started
 
-If in doubt, download from github and use the uncompiled version, or compile it yourself.
+1. Install [vJoy](https://vjoystick.sourceforge.net/).
+2. Configure the virtual device with the axes and buttons you need.
+3. Run the compiled `ujr.exe`, or use `ujr.ahk` if you already have the required AutoHotkey environment and supporting libraries.
 
-Here are some screenshots of UJR in action:
+Full legacy setup and usage instructions are available in [/README.txt](./README.txt).
+
+## Source tree
+
+- [/ujr.ahk](./ujr.ahk) - main AutoHotkey source
+- [/README.txt](./README.txt) - original installation and usage guide
+- [/changelog.txt](./changelog.txt) - release history
+- [/test_trim.m](./test_trim.m) - legacy trim-mode test script
+
+## Security notes
+
+- UJR checks for updates by reading a version text file from `evilc.com`.
+- Any other unexpected network activity should be treated as suspicious.
+- Review [/SECURITY.md](./SECURITY.md) before using this project in a sensitive environment.
+
+## Support and alternatives
+
+If you need an actively maintained remapping tool, use [UCR](https://github.com/evilC/UCR) instead of starting new work on UJR.
+
+## Screenshot
 
 ![UJR Main window](http://evilc.com/files/ahk/vjoy/ujr.png)
